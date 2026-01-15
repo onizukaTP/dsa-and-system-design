@@ -8,7 +8,7 @@
 
 ## Why it exists
 - Long URLs are ugly
-- Platform limit charcters
+- Platform limit characters
 - Tracking
 
 ## Core flow
@@ -31,7 +31,7 @@
 
 ## Caching
 - Cache short_code --> long_url
-- Improves latency and reducs DB load
+- Improves latency and reduces DB load
 
 ## What I'm confident about
 - End to end flow

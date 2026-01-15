@@ -2,37 +2,31 @@
  * #9 Leetcode : Palindrome Number
  *
  * Approach:
- * - Store each digit in a list
- * - Use left and right pointers to check equality
- * - Negative numbers are not palindromes
+ * - Handle edge cases: negative numbers and numbers ending with 0 (except 0 itself)
+ * - Reverse only half of the number by comparing reverse with the remaining part
+ * - If the number has an odd number of digits, remove the middle digit from reverse
+ * - Compare the two halves to determine if the number is a palindrome
  *
- * Time complexity: O(n)
- * Space complexity: O(n)
+ * Time complexity: O(d), where d is the number of digits
+ * Space complexity: O(1)
  */
-
 
 package dsa.leetcode.array;
 
-import java.util.ArrayList;
-import java.util.List;
-
 class Solution {
-    public boolean isPalindrome (int x) {
-        if (x < 0) return false;
-        List<Integer> digits = new ArrayList<>();
+    public boolean isPalindrome(int x) {
+        if (x == 0) return true;
+        if (x < 0 || x % 10 == 0) return false;
         int temp = x;
-        while (temp > 0) {
-            digits.add(temp % 10);
+        int reverse = 0;
+        while (reverse < temp) {
+            int digit = temp % 10;
+            reverse = reverse * 10 + digit;
             temp /= 10;
         }
-        int left = 0;
-        int right = digits.size() - 1;
-        while (left < right) {
-            if (digits.get(left) != digits.get(right))
-                return false;
-            left++;
-            right--;
+        if (reverse > temp) {
+            reverse /= 10;
         }
-        return true;
-    } 
+        return reverse == temp;
+    }
 }

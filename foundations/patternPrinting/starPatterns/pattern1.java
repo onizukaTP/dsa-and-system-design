@@ -1,4 +1,4 @@
-package foundations.patternPrinting.starPatterns;
+package foundations.patternprinting.starpatterns;
 
 // *
 // **

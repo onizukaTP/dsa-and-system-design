@@ -1,31 +1,28 @@
 /**
  * #169 Leetcode: Majority Element
- * 
- * Approach 
- * - Make a frequency map for the element
- * - Check for every entry if it's greater than size / 2
- * - If yes, return that element
- * 
- * Time complexity: O(n)
- * Space complexity: O(n)
-*/
+ *
+ * Approach (Boyer–Moore Voting Algorithm)
+ * - Maintain a candidate and a counter
+ * - If count is 0, set the current element as the new candidate
+ * - If the current element equals the candidate, increment the count
+ * - Otherwise, decrement the count
+ * - After one pass, the candidate is the majority element
+ *   (problem guarantees that a majority element exists)
+ *
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ */
 
 package dsa.leetcode.array;
 
-import java.util.HashMap;
-import java.util.Map;
-
 class Solution {
     public int majorityElement(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
+        int cnt = 0;
+        int candidate = 0;
         for (int num : nums) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
+            if (cnt == 0) candidate = num;
+            cnt += (candidate == num) ? 1 : -1;
         }
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue() > nums.length / 2) {
-                return entry.getKey();
-            }
-        }
-        throw new IllegalArgumentException("No solution");
+        return candidate;
     }
 }

@@ -13,7 +13,7 @@
 
 package dsa.leetcode.array;
 
-class Solution {
+class PlusOne {
     public int[] plusOne(int[] digits) {
         int n = digits.length - 1;
         for (int j = n; j >= 0; j--) {

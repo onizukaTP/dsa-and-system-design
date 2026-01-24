@@ -15,7 +15,7 @@
 
 package dsa.leetcode.array;
 
-class Solution {
+class MajorityElement {
     public int majorityElement(int[] nums) {
         int cnt = 0;
         int candidate = 0;

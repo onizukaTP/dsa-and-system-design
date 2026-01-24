@@ -27,7 +27,7 @@ package dsa.leetcode.array;
  * - O(1), only constant extra variables are used
  */
 
-class Solution {
+class MinSizeSubArrSum {
     public int minSubArrayLen(int target, int[] nums) {
         int sum = 0;
         int left = 0;

@@ -12,7 +12,7 @@
 
 package dsa.leetcode.array;
 
-class Solution {
+class SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {
         int left = 0;
         int right = nums.length-1;

@@ -32,7 +32,7 @@ import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
+class NextGreaterElement1 {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         int[] ans = new int[nums1.length];
         Deque<Integer> stack = new ArrayDeque<>();

@@ -10,7 +10,7 @@
 
 package dsa.leetcode.array;
 
-class Solution {
+class MoveZeroes {
     public void moveZeroes(int[] nums) {
         int i = 0;
         int j = 1;

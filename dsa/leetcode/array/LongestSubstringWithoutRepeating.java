@@ -31,7 +31,7 @@ package dsa.leetcode.array;
 import java.util.HashSet;
 import java.util.Set;
 
-class Solution {
+class LongestSubstringWithoutRepeating {
     public int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>();
         int left = 0;

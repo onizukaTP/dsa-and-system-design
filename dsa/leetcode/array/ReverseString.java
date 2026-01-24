@@ -12,7 +12,7 @@
 
 package dsa.leetcode.array;
 
-class Solution {
+class ReverseString {
     public void reverseString(char[] s) {
         int l = 0;
         int r = s.length - 1;

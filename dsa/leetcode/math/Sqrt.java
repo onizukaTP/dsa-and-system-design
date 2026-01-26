@@ -8,7 +8,7 @@
  * Space Complexity: O(1) — constant extra space.
  */
 
-package dsa.leetcode.array;
+package dsa.leetcode.math;
 
 class Sqrt {
     public int mySqrt(int x) {

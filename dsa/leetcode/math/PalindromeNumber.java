@@ -11,7 +11,7 @@
  * Space complexity: O(1)
  */
 
-package dsa.leetcode.array;
+package dsa.leetcode.math;
 
 class PalindromeNumber {
     public boolean isPalindrome(int x) {

@@ -11,7 +11,7 @@
  * Space complexity: O(n) in the worst case, O(1) otherwise
 */
 
-package dsa.leetcode.array;
+package dsa.leetcode.math;
 
 class PlusOne {
     public int[] plusOne(int[] digits) {

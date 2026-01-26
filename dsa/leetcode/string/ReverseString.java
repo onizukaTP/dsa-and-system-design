@@ -10,7 +10,7 @@
  * Space complexity: O(1)
 */
 
-package dsa.leetcode.array;
+package dsa.leetcode.string;
 
 class ReverseString {
     public void reverseString(char[] s) {

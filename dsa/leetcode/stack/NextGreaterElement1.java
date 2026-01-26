@@ -25,7 +25,7 @@
  * - nums2 contains unique elements (required for value-based mapping)
  */
 
-package dsa.leetcode.array;
+package dsa.leetcode.stack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

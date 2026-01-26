@@ -26,7 +26,7 @@
  * - O(min(n, k)), where k is the character set size (worst case O(n))
  */
 
-package dsa.leetcode.array;
+package dsa.leetcode.string;
 
 import java.util.HashSet;
 import java.util.Set;

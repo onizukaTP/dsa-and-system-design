@@ -20,7 +20,7 @@
  * Space Complexity: O(n) — stack in worst case stores all indices
  */
 
-package dsa.leetcode.array;
+package dsa.leetcode.stack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

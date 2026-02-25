@@ -92,5 +92,30 @@ This decision must be fast and consistent across instances.
 
 ---
 
+## Understandings
+
+Rate limiting protects shared resouced so one actor doesn't ruin things for everyone else. 
+
+**Who are we limiting?** The common identities are User, API Key, IP address. Each of these gets its own counter. 
+
+---
+
+## Jargons
+
+**Downstream** - The things your request touches later. 
+Eg. ApI --> Service --> Database. 
+Database is _downstream_ of the service. If too many requests hit the DB, everything dies. 
+Protect downstream = don't overload the DB or other services. 
+
+**Business Semantics** - Rules that depend on what the API actually does.
+Eg. /login --> sensitive --> strict limits, /getPosts --> cheap --> looser limits
+Business-aware = different rules for different endpoints
+
+**Best-effor enforcement** - meaning "We try our best, but small mistakes are okay."
+Eg. Limit it 100/min, Sometimes user gets 101 or 102 which is fine since system is still safe.
+Hard enforcement = Never exceed, even by 1. 
+
+---
+
 ## Progress Log
-- Day 4: Understood what, why, when, where, and how rate limiting works
+- Day 1: Understood what, why, when, where, and how rate limiting works
